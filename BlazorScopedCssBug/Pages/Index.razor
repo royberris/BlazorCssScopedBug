@@ -1,0 +1,13 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Above H1 is red by scoped Index.razor.css file.
+
+Below is not because this is rendered through MarkupString.
+
+@((MarkupString) myLoadedHtml)
+
+@code {
+    private string myLoadedHtml = "<h1>This is not red while it should be</h1>";
+} 
